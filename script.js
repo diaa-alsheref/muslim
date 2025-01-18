@@ -64,6 +64,10 @@ async function loadData() {
         </g>
     </svg>
 </a>
+   const a = {
+            link: 'https://podcasts.qurancentral.com/maher-al-mueaqly/maher-al-mueaqly-001-48kbps.mp3',  // رابط الملف الصوتي
+            name: 'الفاتحة'  // اسم الملف الذي سيتم تحميله
+        };
 
     $('#downloadLink').on('click', function(event) {
             event.preventDefault(); // منع الانتقال إلى الرابط
