@@ -65,15 +65,14 @@ async function loadData() {
     </svg>
 </a>
 
-        // عندما يتم الضغط على رابط التنزيل
-        $('#downloadLink').on('click', function(event) {
+    $('#downloadLink').on('click', function(event) {
             event.preventDefault(); // منع الانتقال إلى الرابط
 
-            // إنشاء عنصر a جديد لتحميل الملف
+            // إنشاء عنصر <a> جديد باستخدام jQuery
             const link = $('<a>')
-                .attr('href', a.link)
-                .attr('download', a.name + '.mp3')
-                .get(0);  // الحصول على العنصر نفسه
+                .attr('href', a.link)  // تحديد الرابط الذي سيتم تحميل الملف منه
+                .attr('download', a.name + '.mp3')  // تحديد اسم الملف عند التنزيل
+                .get(0);  // تحويل العنصر إلى DOM node لأن click() يعمل فقط على DOM node
 
             // محاكاة النقر على الرابط لتنزيل الملف
             link.click();
