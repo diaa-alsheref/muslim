@@ -20,22 +20,11 @@ $(document).ready(function() {
 });
 
 
-// Loading the data asynchronously using fetch
-async function loadData() {
-    try {
-        const response = await fetch("https://raw.githubusercontent.com/diaa-alsheref/muslim/refs/heads/main/data.json");
-        const list_data = await response.json();
-        // باقي الكود لإضافة البيانات للصفحة
-    } catch (error) {
-        console.error("Error loading data:", error);
-    }
-}
 
-// Loading the data asynchronously using fetch
 async function loadData() {
     try {
         // Fetch the JSON data
-        const response = await fetch("https://raw.githubusercontent.com/diaa-alsheref/muslim/refs/heads/main/data.json");
+        const response = await fetch("https://rawcdn.githack.com/diaa-alsheref/muslim/refs/heads/main/data.json");
         const list_data = await response.json();
 
         // Add the data to the content
