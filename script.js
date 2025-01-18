@@ -43,7 +43,7 @@ async function loadData() {
             // Add card for Sheikh
             $('#content1').append(`
                 <div class="card">
-                    <img src="img/${element.image}" alt="${element.name}"/>
+                    <img src="${element.image}" alt="${element.name}"/>
                     <button alt="${element.name}" class="tablinks" data-active="${element.data_active}" data-id="${element.id}">${element.name}</button>
                 </div>
             `);
