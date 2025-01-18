@@ -1,4 +1,4 @@
-
+ fetch('https://raw.githubusercontent.com/diaa-alsheref/muslim/refs/heads/main/data.json')
 
 window.onload = function() {
     const loadingWrapper = document.querySelector('.loading-wrapper');
