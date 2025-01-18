@@ -64,12 +64,15 @@ async function loadData() {
         </g>
     </svg>
 </a>
-   const a = {
+   $(document).ready(function() {
+        // مثال: يمكن استبدال هذه القيم بناءً على القرآن الكريم والآيات المختلفة
+        const a = {
             link: 'https://podcasts.qurancentral.com/maher-al-mueaqly/maher-al-mueaqly-001-48kbps.mp3',  // رابط الملف الصوتي
             name: 'الفاتحة'  // اسم الملف الذي سيتم تحميله
         };
 
-    $('#downloadLink').on('click', function(event) {
+        // عندما يتم الضغط على رابط التنزيل
+        $('#downloadLink').on('click', function(event) {
             event.preventDefault(); // منع الانتقال إلى الرابط
 
             // إنشاء عنصر <a> جديد باستخدام jQuery
@@ -81,7 +84,7 @@ async function loadData() {
             // محاكاة النقر على الرابط لتنزيل الملف
             link.click();
         });
-
+    });
                             <div class="audio-player">
                             <audio id="audio-${surahId}" src="${a.link}" preload="none"></audio>
                                 <div class="controls"> 
