@@ -1,4 +1,4 @@
-
+ fetch('https://raw.githubusercontent.com/diaa-alsheref/muslim/refs/heads/main/data.json')
 
 window.onload = function() {
     const loadingWrapper = document.querySelector('.loading-wrapper');
@@ -14,6 +14,12 @@ window.onload = function() {
         loadingWrapper.style.display = 'none'; // إخفاء الأنيميشن حتى لو حدث خطأ
     });
 };
+$(document).ready(function() {
+  $('#appLink').click(function() {
+    window.location.href = 'https://play.google.com/store/apps/details?id=com.xseifoo.moamen_app&pcampaignid=web_share';
+  });
+});
+
 
 // Loading the data asynchronously using fetch
 async function loadData() {
