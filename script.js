@@ -50,7 +50,7 @@ async function loadData() {
                     $(`#${element.id}`).append(`
                         <div class="surahs">
                             <p class="download">${a.name}</p>
-<a href="${a.link}" class="download-button" download="${a.name}.mp3">
+<a href="#" class="download-button" id="downloadLink">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <g fill="none" stroke="hsl(156.14deg 98.84% 33.92%)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             <path fill="hsl(156.14deg 98.84% 33.92%)" fill-opacity="0" stroke-dasharray="20" stroke-dashoffset="20" d="M12 4h2v6h2.5l-4.5 4.5M12 4h-2v6h-2.5l4.5 4.5">
@@ -64,6 +64,20 @@ async function loadData() {
         </g>
     </svg>
 </a>
+
+        // عندما يتم الضغط على رابط التنزيل
+        $('#downloadLink').on('click', function(event) {
+            event.preventDefault(); // منع الانتقال إلى الرابط
+
+            // إنشاء عنصر a جديد لتحميل الملف
+            const link = $('<a>')
+                .attr('href', a.link)
+                .attr('download', a.name + '.mp3')
+                .get(0);  // الحصول على العنصر نفسه
+
+            // محاكاة النقر على الرابط لتنزيل الملف
+            link.click();
+        });
 
                             <div class="audio-player">
                             <audio id="audio-${surahId}" src="${a.link}" preload="none"></audio>
